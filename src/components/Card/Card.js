@@ -17,7 +17,7 @@ function Card({ card, onToggleFavorite, isFavorite }) {
       >
         <img
           className="card-wrapper__image"
-          src={card.KanalLogo}
+          src={card.now.Thumbnail}
           alt="Card Symbol"
         />
       </div>
