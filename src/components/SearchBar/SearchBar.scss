@@ -1,0 +1,51 @@
+@import "../../styles/_variables.scss";
+
+.search-container {
+  width: 0.2rem;
+  height: 0.2rem;
+  padding: 1.25rem;
+  background-color: #76c7c0;
+  border-radius: 25px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.08);
+  transition: width 0.3s ease-in-out;
+
+  &:hover {
+    width: 270px;
+  }
+
+  @include mobile() {
+    &:hover {
+      width: 120px;
+    }
+  }
+
+  &__icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__icon {
+    fill: white;
+    margin-left: -0.4rem;
+  }
+
+  &__input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: white;
+    font-weight: 400;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+}

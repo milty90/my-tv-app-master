@@ -1,0 +1,22 @@
+@import "../../styles/variables.scss";
+.scroll-dot__track {
+  position: fixed;
+  right: 8px;
+  top: 0;
+  margin: 85px 0;
+  height: 87vh;
+  min-width: 16px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.scroll-dot__dot {
+  position: absolute;
+  right: 0;
+  width: 8px;
+  height: 28px;
+  border-radius: 14px;
+  background-color: #76c7c0;
+  transform: translateY(-50%);
+  transition: top 0.1s ease;
+}

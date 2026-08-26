@@ -1,0 +1,15 @@
+.App {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+}
+html,
+body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
