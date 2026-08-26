@@ -1,6 +1,6 @@
 import "./CardVertical.scss";
-
-export default function CardVertical({ card }) {
+import FavoriteButton from "../FavoriteButton/FavoriteButton";
+export default function CardVertical({ card, onToggleFavorite, isFavorite }) {
   return (
     <div className="card-vertical">
       <div className="card-left">
@@ -17,12 +17,10 @@ export default function CardVertical({ card }) {
             <p className="card-body__top-name">{card.Kanal}</p>
             <p className="card-body__top-programm">{card.now.Program}</p>
 
-            <img
-              // onClick={favorites}
-              className="card-body__top-favorite"
-              src="/favorite.svg"
-              alt="Favoriten"
-            ></img>
+            <FavoriteButton
+              isFavorite={isFavorite}
+              onToggle={onToggleFavorite}
+            />
           </div>
 
           <div className="card-body__top-wrapper">
