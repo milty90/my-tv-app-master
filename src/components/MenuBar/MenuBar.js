@@ -30,13 +30,13 @@ function MenuBar({
         <div className="menu-bar__list">
           <li
             onClick={home}
-            className={`menu-bar__list-item ${!isFavoritesView ? "menu-bar__list-item--home" : ""}`}
+            className={`menu-bar__list-item ${!isFavoritesView ? "menu-bar__list-item--active" : ""}`}
           >
             Startseite
           </li>
           <li
             onClick={favorites}
-            className={`menu-bar__list-item ${isFavoritesView ? "menu-bar__list-item--favorites" : ""}`}
+            className={`menu-bar__list-item ${isFavoritesView ? "menu-bar__list-item--active" : ""}`}
           >
             Favoriten
           </li>
