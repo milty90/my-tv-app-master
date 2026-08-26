@@ -21,7 +21,6 @@ function Card({ card, onToggleFavorite, isFavorite }) {
           alt="Card Symbol"
         />
       </div>
-
       <div className="card-header">
         <div className="card-header__left">
           <img
