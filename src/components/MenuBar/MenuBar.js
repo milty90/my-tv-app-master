@@ -20,7 +20,7 @@ function MenuBar({
     } else {
       home();
     }
-  }, [isFavoritesView]);
+  }, [isFavoritesView, home, favorites]);
   return (
     <div className="menu-bar">
       <nav className="menu-bar__nav">
@@ -30,13 +30,13 @@ function MenuBar({
         <div className="menu-bar__list">
           <li
             onClick={home}
-            className={`menu-bar__list-item ${!isFavoritesView ? "menu-bar__list-item--active" : ""}`}
+            className={`menu-bar__list-item ${!isFavoritesView ? "menu-bar__list-item--home" : ""}`}
           >
             Startseite
           </li>
           <li
             onClick={favorites}
-            className={`menu-bar__list-item ${isFavoritesView ? "menu-bar__list-item--active" : ""}`}
+            className={`menu-bar__list-item ${isFavoritesView ? "menu-bar__list-item--favorites" : ""}`}
           >
             Favoriten
           </li>
