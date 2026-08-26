@@ -1,6 +1,7 @@
 import SearchBar from "../SearchBar/SearchBar";
 import Loader from "../Loader/Loader";
 import "./MenuBar.scss";
+import { useEffect } from "react";
 
 function MenuBar({
   isLoading,
@@ -13,6 +14,13 @@ function MenuBar({
   isFavoritesView,
   setIsFavoritesView,
 }) {
+  useEffect(() => {
+    if (isFavoritesView) {
+      favorites();
+    } else {
+      home();
+    }
+  }, [isFavoritesView]);
   return (
     <div className="menu-bar">
       <nav className="menu-bar__nav">
@@ -20,35 +28,35 @@ function MenuBar({
         <img src="/logo.png" alt="Logo" className="menu-bar__logo" />
         <span className="menu-bar__logo-placeholder-second">now</span>
         <div className="menu-bar__list">
-          <li onClick={home} className="menu-bar__list-item">
+          <li
+            onClick={home}
+            className={`menu-bar__list-item ${!isFavoritesView ? "menu-bar__list-item--active" : ""}`}
+          >
             Startseite
           </li>
-          <li onClick={favorites} className="menu-bar__list-item">
+          <li
+            onClick={favorites}
+            className={`menu-bar__list-item ${isFavoritesView ? "menu-bar__list-item--active" : ""}`}
+          >
             Favoriten
           </li>
         </div>
         <div className="menu-bar__icons">
           {isFavoritesView ? (
             <div className="menu-bar__icons-wrapper">
-              <img
+              <span
                 onClick={() => setIsFavoritesView(false, home())}
-                className="menu-bar__icons-wrapper-icon"
-                src="/home.svg"
-                alt="Startseite"
-              ></img>
-              <span className="menu-bar__icons-wrapper-label menu-bar__icons-wrapper-label--active">
+                className="menu-bar__icons-wrapper-label "
+              >
                 Startseite
               </span>
             </div>
           ) : (
             <div className="menu-bar__icons-wrapper">
-              <img
+              <span
                 onClick={() => setIsFavoritesView(true, favorites())}
-                className="menu-bar__icons-wrapper-icon"
-                src="/favorite.svg"
-                alt="Favoriten"
-              ></img>
-              <span className="menu-bar__icons-wrapper-label menu-bar__icons-wrapper-label--active">
+                className="menu-bar__icons-wrapper-label "
+              >
                 Favoriten
               </span>
             </div>

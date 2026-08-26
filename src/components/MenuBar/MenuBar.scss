@@ -24,10 +24,12 @@
     &__list {
       display: none;
     }
+
     &__icons {
       display: flex;
       align-items: center;
-      padding-left: 6px;
+      padding-left: 4px;
+      gap: 0.3rem;
 
       &-wrapper {
         display: flex;
@@ -35,25 +37,12 @@
         align-items: center;
 
         &-label {
-          font-size: 0.6rem;
-        }
-        &-icon {
-          padding-top: 6px;
-
-          width: 22px;
-          height: 22px;
-
-          filter: brightness(0) saturate(100%) invert(12%) sepia(61%)
-            saturate(14%) hue-rotate(31deg) brightness(94%) contrast(81%);
-
-          &:hover {
-            transform: scale(1.2);
-            filter: brightness(0) saturate(100%) invert(95%) sepia(86%)
-              saturate(5683%) hue-rotate(161deg) brightness(83%) contrast(84%);
-          }
+          font-size: 1.1rem;
+          font-family: var(--font-family-lexend);
         }
       }
     }
+
     &__logo-with-text {
       display: none;
     }
@@ -79,22 +68,8 @@
         align-items: center;
 
         &-label {
-          font-size: 0.6rem;
-        }
-        &-icon {
-          padding-top: 6px;
-
-          width: 22px;
-          height: 22px;
-
-          filter: brightness(0) saturate(100%) invert(12%) sepia(61%)
-            saturate(14%) hue-rotate(31deg) brightness(94%) contrast(81%);
-
-          &:hover {
-            transform: scale(1.2);
-            filter: brightness(0) saturate(100%) invert(95%) sepia(86%)
-              saturate(5683%) hue-rotate(161deg) brightness(83%) contrast(84%);
-          }
+          font-size: 1.1rem;
+          font-family: var(--font-family-lexend);
         }
       }
     }
@@ -176,22 +151,13 @@
       font-size: 1.1rem;
       font-family: var(--font-family-lexend);
 
+      &--active {
+        font-weight: 600;
+        color: #32a097;
+      }
+
       &:hover {
         transform: scale(1.1);
-      }
-    }
-
-    &-icon {
-      width: 35px;
-      height: 35px;
-
-      filter: brightness(0) saturate(100%) invert(12%) sepia(61%) saturate(14%)
-        hue-rotate(31deg) brightness(94%) contrast(81%);
-
-      &:hover {
-        transform: scale(1.2);
-        filter: brightness(0) saturate(100%) invert(95%) sepia(86%)
-          saturate(5683%) hue-rotate(161deg) brightness(83%) contrast(84%);
       }
     }
   }
